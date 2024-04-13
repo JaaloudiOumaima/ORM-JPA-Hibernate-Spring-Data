@@ -19,9 +19,9 @@ public class UniversityApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		//studentsRepository.save(new Student(null,"Oumaima",24,"Women","Tangier"));
-		//studentsRepository.save(new Student(null,"Hamza",26,"Men","Casablanca"));
-		//studentsRepository.save(new Student(null,"Yassine",28,"Men","Marrakesh"));
+		studentsRepository.save(new Student(null,"Oumaima",24,"Women","Tangier"));
+		studentsRepository.save(new Student(null,"Hamza",26,"Men","Casablanca"));
+		studentsRepository.save(new Student(null,"Yassine",28,"Men","Marrakesh"));
 		List<Student> studentList= studentsRepository.findAll();
 		studentList.forEach(s->{
 			System.out.println(s.toString());
